@@ -4,13 +4,13 @@ def minimumBribes(q):
         c = q[i] - (i + 1)
         if (c > 2):
             return 'Too chaotic'
-        for ii in range(len(q)-i):
-            if (q[ii+i] < q[i]):
+        for ii in range(max(0, q[i] - 2),i):
+            if (q[ii] > q[i]):
                 result = result + 1
     return result
 
-l = [5,1,2,3,7,8,6,4]
-#l = [1,2,5,3,7,8,6,4]
+#l = [5,1,2,3,7,8,6,4]
+l = [1,2,5,3,7,8,6,4]
 #l = [2,5,1,3,4]
 #l = [2,1,5,4,3]
 
